@@ -1,0 +1,68 @@
+{
+  "wall": {
+    "paths": [
+      "artifacts/line-3/wall-v9.png",
+      "artifacts/line-3/wall.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "bytes": 3971537,
+    "sha256": "3b018092639fc3335483254964e07fd34d739f6d17544132e0861effb8cce679"
+  },
+  "thumbnail": {
+    "path": "dist/line-3/28.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 74254
+  },
+  "preservation": {
+    "inheritedSha256": "839787aa9559d5d410d5c26787afdad99171f43e5c099695b8c3e248fb684667",
+    "editRectangle": [
+      809,
+      1025,
+      148,
+      90
+    ],
+    "changedPixels": 12750,
+    "changedPixelsOutsideRectangle": 0
+  },
+  "tests": {
+    "newPassed": 15,
+    "seededArithmeticCases": 150,
+    "demoExitCode": 0,
+    "demoIsSynthetic": true,
+    "demoDestination": "ZTO"
+  },
+  "visualReview": {
+    "reviewed": true,
+    "imagesReviewed": [
+      "artifacts/line-3/wall-v9.png",
+      "dist/line-3/28.jpg"
+    ],
+    "pepe": "Inherited heavy-lidded eyes and wide mouth retained.",
+    "visibleHandDigits": [
+      5,
+      5
+    ],
+    "newHandsOrStencils": 0,
+    "forbiddenVisualElementsFound": [],
+    "observation": "Small worn ochre shelter over two charcoal pebble heaps. All ancestral marks preserved. Local review only.",
+    "promptDifferences": "Renderer placed the motif lower than requested; confinement preserves all inherited pixels outside the actual vacant-stone rectangle."
+  },
+  "unmetVisualRequirements": [],
+  "checks": {
+    "recordSchema": true,
+    "recordHash": true,
+    "continuingWallIdentical": true,
+    "oldRecordsThumbnailsGoalAndToolsUnchanged": true,
+    "imageFormatsAndDimensions": true,
+    "changedPathsWithinScope": true,
+    "newNonArtifactFilesUnder100KB": true,
+    "requiredPngUntracked": true,
+    "cliWorksFromAnotherDirectory": true,
+    "gitDiffWhitespaceCheck": true
+  }
+}

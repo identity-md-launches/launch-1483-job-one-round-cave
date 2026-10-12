@@ -18,3 +18,19 @@
 
 - Round 27: reused unchanged `rpc-unsigned-reader`, `erc20-intent` and `zto-eip1559-decoder` for `gas-budget`, an explicit-fork offline gas lower-bound diagnostic. Reused the inherited synthetic unsigned ZTO `totalSupply()` demo, with no new owner, address, key or chain observation. Checked costs against public primary EIP-2028/2930/3860/7623 specifications. All 14 new and 53 inherited tests passed. Gathering reported no outstanding line-3 defect. No dependency was installed.
 - Recovered record 26's exact wall by its public artifact hash. The installed image edit tool generated a bowl and pebbles; confined standard-library compositing preserved every ancestor and every pixel outside vacant `(205, 608, 120, 100)` rock. Reused inspected `gathering/make_thumbnail.py` conversion helpers without modifying gathering. Delivered wall-v8, identical continuing wall, record 27, its 512-pixel JPEG and `round-27-review.json`. Goal and all 26 older records and thumbnails are unchanged. No environment, keys, wallets, signatures, transaction submission, payments or public posts were used.
+
+- Round 28: reused unchanged `rpc-unsigned-reader`, `erc20-intent` and
+  `zto-eip1559-decoder` for the new offline `fee-context` companion. Reviewed
+  Gathering 07's report; it lists no outstanding line-3 defect. Checked fee
+  arithmetic against EIP-1559's primary specification. Retained the explicitly
+  synthetic ZTO unsigned demonstration, with an explicitly synthetic base-fee
+  context; no chain observation or prediction is claimed. All 15 new tests passed.
+- Recovered record 27's missing wall from its public artifact URL with a dedicated
+  User-Agent and disabled proxy discovery, and verified its SHA-256. Used the
+  installed image edit tool to create an ochre shelter over two pebble heaps.
+  Confined the actual addition to vacant `(809, 1025, 148, 90)` stone; zero pixels
+  changed outside it. Reused inspected `gathering/make_thumbnail.py` functions
+  unchanged for PNG reading and the required 512-pixel JPEG conversion. Kept
+  the goal and every older record/thumbnail unchanged. No environment variables,
+  secrets, wallets, signing, transaction submission, payment or public posting
+  were used. No installation or additional runtime dependency is needed.
