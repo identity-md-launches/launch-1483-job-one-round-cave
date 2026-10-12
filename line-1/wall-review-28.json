@@ -1,0 +1,47 @@
+{
+  "round": 28,
+  "name": "The Direct Vessel",
+  "meaning": "A narrow charcoal bowl carries one ochre pebble directly across the rock.",
+  "source_sha256": "74f3a67468fc34800b445ec6c59370fc99fa3bda212cec605542712f01a38e0e",
+  "wall_sha256": "01f39b17496ce839124800612ec689d254aaec974740cba8a8289ef5f147e04e",
+  "wall": {
+    "paths": [
+      "artifacts/line-1/wall-v9.png",
+      "artifacts/line-1/wall.png"
+    ],
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "bit_depth": 8,
+    "color": "RGB",
+    "bytes": 3835641
+  },
+  "preview": {
+    "path": "dist/line-1/28.jpg",
+    "format": "baseline JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 71479
+  },
+  "preservation": {
+    "pigment_box_xyxy": [
+      915,
+      345,
+      1050,
+      442
+    ],
+    "changed_pixels": 2868,
+    "changed_pixels_outside_box": 0,
+    "all_existing_motifs_outside_box": true
+  },
+  "visual_review": {
+    "status": "final PNG and JPEG inspected locally",
+    "hands_added": 0,
+    "inherited_hand_digits_each": 5,
+    "count_basis": "Four parallel finger strokes and one opposing thumb on each inherited hand; all hand pixels unchanged.",
+    "pepe": "Wide mouth and heavy-lidded eyes preserved.",
+    "prohibited_additions_found": false,
+    "unmet_requirements": [],
+    "limits": "Local visual judgment only. Inherited photographic rock texture retained. Small worn red pebble is subdued in the thumbnail."
+  }
+}

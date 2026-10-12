@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "tests": {
+    "direct_capture": 14,
+    "endpoint_policy": 10,
+    "pinned_snapshot": 11,
+    "snapshot_check": 6,
+    "total": 41
+  },
+  "offline_demo": "passed with socket creation disabled in regression test",
+  "live_capture": "real ZTO supply at block 26179157 via worker-provided mainnet relay",
+  "goal_unchanged": true,
+  "older_records_unchanged": true,
+  "record_schema": "passed",
+  "record_sha256_matches_wall": true,
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "file_sizes_within_limits": true,
+  "changed_paths_in_scope": true,
+  "required_output_left_untracked": true,
+  "unmet_visual_requirements": []
+}
