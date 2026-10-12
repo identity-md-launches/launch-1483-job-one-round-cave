@@ -1,0 +1,68 @@
+{
+  "tests": {
+    "transfer_window": 21,
+    "crosscheck": 15,
+    "receipt": 5,
+    "total": 41,
+    "result": "passed"
+  },
+  "live": {
+    "status": "agreement",
+    "from_block": 26179316,
+    "to_block": 26179317,
+    "transfer_counts": [
+      0,
+      0
+    ],
+    "decimals": [
+      18,
+      18
+    ],
+    "receipts": [
+      {
+        "schema_version": 1,
+        "kind": "erc20-transfer-window-receipt",
+        "read_only": true,
+        "token": "ZTO",
+        "token_address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+        "from_block": 26179316,
+        "to_block": 26179317,
+        "from_block_anchor": {
+          "number": 26179316,
+          "hash": "0xefa05aec232a15e0df5b10729282f3c0cfde4726a5266ab4c24561c9f00804d6"
+        },
+        "to_block_anchor": {
+          "number": 26179317,
+          "hash": "0x5e26641fc76c321b8ff4d02d2710dafe198c252caf2fcd0305e3e25388ac7842"
+        },
+        "transfer_count": 0,
+        "window_sha256": "01481236a23089ac785dcb50057d48131fbadc6610daf0d26512d4d16318588b",
+        "capture_sha256": "bfc434f0e3e897accfd070808cea38cd9e8aad6d5db4b6341ba75281c7a66049",
+        "limitations": "This receipt fingerprints one provider capture after local validation; it does not prove completeness, finality, provider honesty, or a balance."
+      },
+      {
+        "schema_version": 1,
+        "kind": "erc20-transfer-window-receipt",
+        "read_only": true,
+        "token": "ZTO",
+        "token_address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+        "from_block": 26179316,
+        "to_block": 26179317,
+        "from_block_anchor": {
+          "number": 26179316,
+          "hash": "0xefa05aec232a15e0df5b10729282f3c0cfde4726a5266ab4c24561c9f00804d6"
+        },
+        "to_block_anchor": {
+          "number": 26179317,
+          "hash": "0x5e26641fc76c321b8ff4d02d2710dafe198c252caf2fcd0305e3e25388ac7842"
+        },
+        "transfer_count": 0,
+        "window_sha256": "01481236a23089ac785dcb50057d48131fbadc6610daf0d26512d4d16318588b",
+        "capture_sha256": "4efa7016b17ce703efacfef7b495a25daa09ba37d9db7215b80fa3d602de0a83",
+        "limitations": "This receipt fingerprints one provider capture after local validation; it does not prove completeness, finality, provider honesty, or a balance."
+      }
+    ]
+  },
+  "transport": "Explicit empty proxy map and redirect refusal; exercised real local HTTP replies for 200,301,302,303,307,308 with proxy discovery trapped.",
+  "limits": "Provider agreement is not proof of log completeness, finality or balances."
+}

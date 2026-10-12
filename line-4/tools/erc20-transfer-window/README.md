@@ -138,3 +138,35 @@ Round 22's final wall is `artifacts/line-4/wall.png`, with an identical named
 output at `artifacts/line-4/wall-v2.png`; `dist/line-4/22.jpg` is the 512-pixel
 JPEG. See `line-4/IMAGE-REVIEW.md` and `line-4/image-review.json` for dimensions,
 preservation checks, prompt and visual review.
+
+## Round 28: explicit public-read transport
+
+Every request now uses a fresh standard-library opener with an explicit empty
+proxy map. It does not discover environment or system proxies, use an installed
+global opener, or follow HTTP redirects. This also applies to the exact numeric
+loopback relay and to the crosscheck companion through its existing import.
+The chosen endpoint must be reachable directly; a redirect produces an error
+instead of silently changing the request destination. No CLI or capture schema
+changed, and no dependency was installed.
+
+One command to see this improvement working without internet access:
+
+```sh
+python3 -B line-4/tools/erc20-transfer-window/test_transfer_window.py
+```
+
+Tried during round 28: all 21 reader tests passed. A local HTTP server returned
+a valid mainnet reply and each of 301, 302, 303, 307 and 308; exactly six reads
+reached the selected route and none reached the redirect target. Proxy
+discovery was replaced with a failing trap throughout those requests. All 15
+crosscheck and five receipt regressions also passed.
+
+A fresh two-provider ZTO observation at blocks 26179316–26179317 returned zero
+Transfer events and 18 decimals from both PublicNode and dRPC, with matching
+boundary hashes and semantic receipts. Exact dated evidence is in
+`round-28-live-crosscheck.json`; this is a provider observation, not a balance
+or a completeness/finality proof. To repeat a live bounded read:
+
+```sh
+python3 -B line-4/tools/erc20-transfer-window/transfer_window.py --latest-window 2
+```

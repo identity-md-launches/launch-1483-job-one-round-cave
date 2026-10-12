@@ -4,6 +4,8 @@ import contextlib
 import copy
 import io
 import json
+import http.server
+import threading
 from pathlib import Path
 import unittest
 from unittest.mock import patch
@@ -179,6 +181,62 @@ class CaptureTests(unittest.TestCase):
 
 
 class TransportTests(unittest.TestCase):
+    def test_no_proxy_discovery_or_global_opener(self):
+        with patch.object(window.urllib.request, 'getproxies', side_effect=AssertionError('proxy discovery')), \
+                patch.object(window.urllib.request, 'urlopen', side_effect=AssertionError('global opener')), \
+                patch.object(window.urllib.request.OpenerDirector, 'open',
+                             return_value=self.reply({'jsonrpc': '2.0', 'id': 1, 'result': '0x1'})):
+            self.assertEqual(window.rpc(window.DEFAULT_RPC, 'eth_chainId', []), '0x1')
+            opener = window.public_opener()
+            proxy = [h for h in opener.handlers if isinstance(h, window.urllib.request.ProxyHandler)]
+            self.assertTrue(all(h.proxies == {} for h in proxy))
+            self.assertTrue(any(isinstance(h, window.NoRedirect) for h in opener.handlers))
+
+    def test_actual_loopback_http_and_redirects_never_reach_target(self):
+        requests = []
+        replies = [200, 301, 302, 303, 307, 308]
+
+        class Handler(http.server.BaseHTTPRequestHandler):
+            def log_message(self, *args): pass
+
+            def do_POST(self):
+                body = self.rfile.read(int(self.headers['Content-Length']))
+                requests.append((self.path, self.headers.get('User-Agent'), json.loads(body)))
+                if self.path != '/rpc/1':
+                    self.send_error(500)
+                    return
+                code = replies.pop(0)
+                self.send_response(code)
+                if code == 200:
+                    self.send_header('Content-Type', 'application/json')
+                else:
+                    self.send_header('Location', '/redirect-target')
+                self.end_headers()
+                if code == 200:
+                    self.wfile.write(b'{"jsonrpc":"2.0","id":1,"result":"0x1"}')
+
+            def do_GET(self):
+                requests.append((self.path, None, None))
+                self.send_error(500)
+
+        with http.server.HTTPServer(('127.0.0.1', 0), Handler) as server:
+            thread = threading.Thread(target=server.serve_forever, daemon=True)
+            thread.start()
+            try:
+                url = 'http://127.0.0.1:{}/rpc/1'.format(server.server_port)
+                with patch.object(window.urllib.request, 'getproxies', side_effect=AssertionError('proxy discovery')):
+                    self.assertEqual(window.rpc(url, 'eth_chainId', []), '0x1')
+                    for code in (301, 302, 303, 307, 308):
+                        with self.subTest(code=code), self.assertRaises(window.RpcError):
+                            window.rpc(url, 'eth_chainId', [])
+            finally:
+                server.shutdown()
+                thread.join(timeout=5)
+        self.assertEqual(len(requests), 6)
+        self.assertTrue(all(path == '/rpc/1' for path, _, _ in requests))
+        self.assertTrue(all(agent == window.USER_AGENT for _, agent, _ in requests))
+        self.assertTrue(all(body['method'] == 'eth_chainId' for _, _, body in requests))
+
     def reply(self, payload):
         class Reply:
             def __enter__(self): return self
@@ -192,12 +250,12 @@ class TransportTests(unittest.TestCase):
                         {'jsonrpc': '2.0', 'id': 2, 'result': []},
                         {'jsonrpc': '2.0', 'id': 1},
                         {'jsonrpc': '2.0', 'id': 1, 'error': {'code': -32000}}):
-            with self.subTest(payload=payload), patch.object(window.urllib.request, 'urlopen', return_value=self.reply(payload)):
+            with self.subTest(payload=payload), patch.object(window.urllib.request.OpenerDirector, 'open', return_value=self.reply(payload)):
                 with self.assertRaises(window.RpcError):
                     window.rpc(window.DEFAULT_RPC, 'eth_getLogs', [])
 
     def test_valid_envelope_user_agent_and_read_method(self):
-        with patch.object(window.urllib.request, 'urlopen', return_value=self.reply({'jsonrpc': '2.0', 'id': 1, 'result': '0x1'})) as opener:
+        with patch.object(window.urllib.request.OpenerDirector, 'open', return_value=self.reply({'jsonrpc': '2.0', 'id': 1, 'result': '0x1'})) as opener:
             self.assertEqual(window.rpc(window.DEFAULT_RPC, 'eth_chainId', []), '0x1')
             request = opener.call_args.args[0]
             self.assertEqual(request.get_header('User-agent'), window.USER_AGENT)
@@ -205,24 +263,24 @@ class TransportTests(unittest.TestCase):
 
     def test_exact_loopback_mainnet_relay_uses_same_readonly_transport(self):
         relay = 'http://127.0.0.1:44117/rpc/1'
-        with patch.object(window.urllib.request, 'urlopen', return_value=self.reply({'jsonrpc': '2.0', 'id': 1, 'result': '0x1'})) as opener:
+        with patch.object(window.urllib.request.OpenerDirector, 'open', return_value=self.reply({'jsonrpc': '2.0', 'id': 1, 'result': '0x1'})) as opener:
             self.assertEqual(window.rpc(relay, 'eth_chainId', []), '0x1')
             request = opener.call_args.args[0]
             self.assertEqual(request.full_url, relay)
             self.assertEqual(request.get_header('User-agent'), window.USER_AGENT)
-        with patch.object(window.urllib.request, 'urlopen') as opener:
+        with patch.object(window.urllib.request.OpenerDirector, 'open') as opener:
             with self.assertRaises(window.RpcError):
                 window.rpc(relay, 'eth_sendRawTransaction', [])
             opener.assert_not_called()
 
     def test_response_limit_and_network_error(self):
-        with patch.object(window, 'MAX_RESPONSE_BYTES', 1), patch.object(window.urllib.request, 'urlopen', return_value=self.reply({})):
+        with patch.object(window, 'MAX_RESPONSE_BYTES', 1), patch.object(window.urllib.request.OpenerDirector, 'open', return_value=self.reply({})):
             with self.assertRaises(window.RpcError): window.rpc(window.DEFAULT_RPC, 'eth_chainId', [])
-        with patch.object(window.urllib.request, 'urlopen', side_effect=OSError('offline')):
+        with patch.object(window.urllib.request.OpenerDirector, 'open', side_effect=OSError('offline')):
             with self.assertRaises(window.RpcError): window.rpc(window.DEFAULT_RPC, 'eth_chainId', [])
 
     def test_nonread_methods_and_credential_endpoints_never_network(self):
-        with patch.object(window.urllib.request, 'urlopen') as opener:
+        with patch.object(window.urllib.request.OpenerDirector, 'open') as opener:
             with self.assertRaises(window.RpcError): window.rpc(window.DEFAULT_RPC, 'not_a_read', [])
             for endpoint in ('file:///workspace/data', 'http://example.org',
                              'http://127.0.0.1:44117/rpc/56',

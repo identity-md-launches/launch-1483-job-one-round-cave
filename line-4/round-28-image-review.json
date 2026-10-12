@@ -1,0 +1,45 @@
+{
+  "wall_paths": [
+    "artifacts/line-4/wall.png",
+    "artifacts/line-4/wall-v9.png"
+  ],
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "PNG, RGB, 8-bit",
+  "wall_bytes": 3938397,
+  "wall_sha256": "1b29da20f53868e68ca9e9aa1c7e51ee9a0249dd01c6efc4e19672eeeb95c6b6",
+  "ancestor_sha256": "4243fdf9808ba18a90aaa058229a263e7b8323e861fbe423cc8ad445d2dca0bf",
+  "thumbnail": {
+    "path": "dist/line-4/28.jpg",
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "baseline JPEG",
+    "bytes": 76085
+  },
+  "addition_rectangle": [
+    860,
+    230,
+    210,
+    90
+  ],
+  "changed_pixels": 8836,
+  "changed_pixels_outside_rectangle": 0,
+  "image_tool": "installed mcp image generate tool; pigment-only insert composited in memory",
+  "visual_review": "Inspected whole final PNG and 512-pixel JPEG: recognizable ancestral Pepe, torchlit warm rough rock, cracks, size, framing and ancestor marks preserved. Added rough charcoal route between two red ochre stones with a yellow ochre center stroke on vacant upper-right rock. No letters, numbers, captions, signatures, logos, watermarks, frame, new hands or handprints. Inherited hand digit counts remain uncertain.",
+  "hand_review": {
+    "new_hands": 0,
+    "new_handprints": 0,
+    "inherited_hands": "Preserved exactly; worn closed grasps prevent independent counting of every digit."
+  },
+  "unmet_visual_requirements": [
+    "Five separate digits on each inherited hand cannot be independently distinguished. Preserving ancestor marks prevents redrawing them."
+  ],
+  "limitations": [
+    "Local inspection cannot certify the inherited digit count."
+  ],
+  "prompt": "Isolated prehistoric charcoal trail directly between two rough red ochre stones with a yellow ochre center stroke, worn dry earth pigments on white for pigment extraction; no text, numbers, hands, people, border or additional frog."
+}

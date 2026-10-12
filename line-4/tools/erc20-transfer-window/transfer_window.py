@@ -34,6 +34,18 @@ class RpcError(RuntimeError):
     """An RPC response could not supply the requested public data."""
 
 
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    """Keep every public read at the endpoint the worker explicitly selected."""
+
+    def redirect_request(self, request, response, code, message, headers, new_url):
+        raise RpcError("RPC endpoint returned an HTTP redirect; no redirect followed")
+
+
+def public_opener():
+    """Build a fresh transport without environment or system proxy discovery."""
+    return urllib.request.build_opener(urllib.request.ProxyHandler({}), NoRedirect())
+
+
 def rpc(endpoint, method, params):
     """Perform one JSON-RPC request, returning its result or raising RpcError."""
     if method not in READ_METHODS:
@@ -50,7 +62,7 @@ def rpc(endpoint, method, params):
         method="POST",
     )
     try:
-        with urllib.request.urlopen(request, timeout=25) as response:
+        with public_opener().open(request, timeout=25) as response:
             raw = response.read(MAX_RESPONSE_BYTES + 1)
             if len(raw) > MAX_RESPONSE_BYTES:
                 raise RpcError("RPC response exceeds byte limit; use a smaller window")

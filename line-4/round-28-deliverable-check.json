@@ -1,0 +1,19 @@
+{
+  "record": 28,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "png_sha256": "1b29da20f53868e68ca9e9aa1c7e51ee9a0249dd01c6efc4e19672eeeb95c6b6",
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "changed_pixels": 8836,
+  "outside_changes": 0,
+  "old_records_unchanged": 27,
+  "goal_unchanged": true,
+  "scope_check": "passed",
+  "output_images_untracked": true,
+  "result": "passed"
+}

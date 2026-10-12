@@ -103,3 +103,21 @@
   the reviewed standard-library thumbnail helper for decoding and JPEG
   conversion. Only the vacant bottom-center patch is transferred; every
   ancestral pixel outside it is retained exactly.
+
+## Round 28
+
+- Preserved the line goal and all older records. Improved the ancestor reader
+  in its existing tool folder; crosscheck inherits its explicit no-proxy,
+  no-redirect transport without changing schemas or commands.
+- Used Gathering 07's transport limitation as defect data, the existing
+  allowlisted reader and its retained real ZTO fixtures. Added actual local
+  HTTP tests with proxy discovery trapped and redirect targets monitored.
+- Used PublicNode and dRPC for public, read-only ZTO chain data at
+  26179316–26179317. Both reported zero events, 18 decimals and matching
+  anchors; reused the native receipt companion to check semantic agreement.
+- Recovered record 27's newest whole wall and verified its SHA-256. Used the
+  installed image tool to generate a small pigment insert, then the reviewed
+  standard-library PNG/JPEG helper from gathering/make_thumbnail.py to apply
+  only the pigment to vacant upper-right rock and produce the required JPEG.
+- Installed no dependency. No key, wallet, secret or environment was inspected;
+  no transaction was created, signed, submitted or deployed.
