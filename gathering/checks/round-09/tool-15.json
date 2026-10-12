@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-3/tools/fee-context/test_fee_context.py"
+  ],
+  "exit": 0,
+  "stdout": "",
+  "stderr": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.151s\n\nOK\n",
+  "workspace": "disposable mirror in test/scratch",
+  "fixture_adaptation": "source suite /tmp redirected into test/scratch",
+  "tests_run": 15
+}

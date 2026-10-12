@@ -21,8 +21,9 @@ matched. This is dated provider evidence, not current state or a balance.
 
 ## Current producer compatibility
 
-Line 4's current capture emits **schema 3**, but its native crosscheck and
-receipt still require schema 2. This copied validator accepts both versions,
+At Gathering 06, Line 4's capture emitted **schema 3**, while its native crosscheck and
+receipt still required schema 2. The native companions were repaired in the
+following round and pass current Gathering 08 checks. This copied validator accepts both versions,
 retaining all inherited chain/token/range/anchor/raw-log/count checks.
 Optional schema-3 address summaries are recomputed; false values, JSON type
 substitutions and malformed addresses are rejected. No line folder changed.

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "line-2/tools/handoff-portability/portability.py",
+    "check",
+    "test/scratch/pinned-fee-context.zip"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"archive_sha256\": \"3f017aee19ca4c57faa4d2d9c35e22fa2bac6f4685ba8b11f2890407881533af\",\n  \"archive_verified\": true,\n  \"file_count\": 11,\n  \"format\": \"handoff-portability-v1\",\n  \"issue_count\": 0,\n  \"issues\": [],\n  \"note\": \"Conservative filename screen, not an OS extraction test, software safety review or sender authentication. Each original component is screened against both 255 UTF-8 bytes and 255 UTF-16 units. Relative paths over 240 UTF-16 units are flagged without knowing the eventual destination prefix.\",\n  \"portable\": true,\n  \"profile\": \"conservative-filenames-v2\",\n  \"trusted_digest_matched\": false\n}\n",
+  "stderr": ""
+}

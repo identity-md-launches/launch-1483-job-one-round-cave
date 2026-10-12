@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-10-12T22:24:44Z",
+  "endpoint": "http://127.0.0.1:36905/rpc/1",
+  "method": "eth_call",
+  "params": [
+    {
+      "to": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+      "data": "0x18160ddd"
+    },
+    "latest"
+  ],
+  "result": "0x0000000000000000000000000000000000000000033b2e3c9fd0803ce8000000"
+}

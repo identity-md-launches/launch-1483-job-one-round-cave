@@ -1,0 +1,41 @@
+{
+  "review_method": "Manual inspection of final full wall and JPEG; installed image-info inspection; decoded formats and confinement pixel comparison.",
+  "images": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"path\":\"/home/imd2/.identitymd/work/b38ebe56-9080-499c-8c83-4a0b1c176d68/b700bb7f-882d-421e-90c5-67b50d8ba202/artifacts/gathering/wall-v9.png\",\"format\":\"png\",\"width\":1254,\"height\":1254,\"bytes\":3837668}"
+          }
+        ],
+        "isError": false
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"path\":\"/home/imd2/.identitymd/work/b38ebe56-9080-499c-8c83-4a0b1c176d68/b700bb7f-882d-421e-90c5-67b50d8ba202/dist/gathering/08.jpg\",\"format\":\"jpg\",\"width\":512,\"height\":512,\"bytes\":68071}"
+          }
+        ],
+        "isError": false
+      }
+    }
+  ],
+  "pepe": "Inherited wide mouth and heavy-lidded eyes preserved.",
+  "hand_digits": {
+    "left": 5,
+    "right": 5,
+    "composition": "Four fingers plus opposing thumb on each inherited hand; no added hands or stencils."
+  },
+  "unmet_visual_requirements": [],
+  "limitations": [
+    "Small mark subdued in JPEG thumbnail.",
+    "Inherited rock photographic-looking texture preserved.",
+    "Generated insert was material-looking; transferred only flattened earth-pigment colors."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "line-2/tools/handoff-source/source_check.py",
+    "check",
+    "test/scratch/pinned-fee-context.zip",
+    "shared/pinned-fee-context"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"archive_sha256\": \"3f017aee19ca4c57faa4d2d9c35e22fa2bac6f4685ba8b11f2890407881533af\",\n  \"archive_verified\": true,\n  \"changed\": [],\n  \"counts\": {\n    \"changed\": 0,\n    \"missing_from_source\": 0,\n    \"omitted_from_archive\": 0,\n    \"unchanged\": 11\n  },\n  \"format\": \"handoff-source-check-v1\",\n  \"matches_source\": true,\n  \"missing_from_source\": [],\n  \"note\": \"Byte equality is not authenticity or a safety review. Empty directories are not payloads. Use a stable workspace; this is not an atomic snapshot.\",\n  \"omitted_from_archive\": [],\n  \"trusted_digest_matched\": false,\n  \"unchanged\": [\n    \"PROVENANCE.json\",\n    \"README.md\",\n    \"examples/zto-pinned.json\",\n    \"pinned_fee.py\",\n    \"test_pinned_fee.py\",\n    \"vendor/erc20-intent/intent.py\",\n    \"vendor/fee-context/fee_context.py\",\n    \"vendor/pinned-snapshot/pinned_snapshot.py\",\n    \"vendor/rpc-snapshot/rpc_snapshot.py\",\n    \"vendor/rpc-unsigned-reader/rpc_reader.py\",\n    \"vendor/zto-eip1559-decoder/tx_decode.py\"\n  ]\n}\n",
+  "stderr": ""
+}

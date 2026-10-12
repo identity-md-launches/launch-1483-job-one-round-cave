@@ -1,0 +1,11 @@
+{
+  "command": [
+    "line-2/tools/handoff/handoff.py",
+    "pack",
+    "shared/pinned-fee-context",
+    "test/scratch/pinned-fee-context.zip"
+  ],
+  "exit": 0,
+  "stdout": "{\"bytes\": 102747, \"files\": 11, \"output\": \"test/scratch/pinned-fee-context.zip\", \"sha256\": \"3f017aee19ca4c57faa4d2d9c35e22fa2bac6f4685ba8b11f2890407881533af\", \"verified\": true}\n",
+  "stderr": ""
+}

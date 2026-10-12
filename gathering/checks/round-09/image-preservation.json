@@ -1,0 +1,31 @@
+{
+  "source_record": 7,
+  "record_number": 8,
+  "source_sha256": "846767d546efffd0fe4f223989c803aaafcb52e8c629b5528140be2dc380a5d5",
+  "wall_sha256": "df0afb1d0df0c94e6d72022ff545db93bf6786f363af8f825778be3d5dcd57a4",
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "8-bit RGB PNG",
+  "png_bytes": 3837668,
+  "generated_insert_dimensions": [
+    1024,
+    1024
+  ],
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "baseline JPEG",
+  "jpeg_bytes": 68071,
+  "addition_rectangle": [
+    550,
+    970,
+    150,
+    155
+  ],
+  "changed_pixels": 4978,
+  "changed_pixels_outside_rectangle": 0,
+  "method": "Installed image tool pigment insert, mapped to earth pigments and confined in memory to vacant lower rock."
+}

@@ -77,3 +77,11 @@ python3 -B shared/call-witness/witness.py demo
 Gathering 07 also refreshed Evidence review's Line 4 copies to accept current
 schema-3 captures and revalidate optional address summaries. Its historical
 schema-2 examples still pass; no line sources or old examples were changed.
+
+## Pinned fee context (Gathering 08)
+
+`pinned-fee-context/` joins Line 1's retained number-pinned ZTO observation to
+Line 3's unsigned fee arithmetic. It validates the full snapshot and identical
+before/after block base fees, then keeps the block identity beside the diagnostic.
+Run `python3 -B shared/pinned-fee-context/pinned_fee.py demo` offline.
+Six unchanged dependencies are vendored with provenance; no line folders needed.

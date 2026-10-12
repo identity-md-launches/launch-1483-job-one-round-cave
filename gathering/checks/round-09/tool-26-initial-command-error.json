@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-3/tools/fee-context/fee_context.py",
+    "--base-fee",
+    "1000000000",
+    "--demo"
+  ],
+  "exit": 2,
+  "stdout": "",
+  "stderr": "usage: fee_context.py [-h] --base-fee-wei BASE_FEE_WEI --context-chain\n                      CONTEXT_CHAIN [--format {rlp,json}]\n                      (--demo | --stdin | --transaction TRANSACTION)\nfee_context.py: error: the following arguments are required: --context-chain\n",
+  "workspace": "disposable mirror in test/scratch",
+  "fixture_adaptation": "source suite /tmp redirected into test/scratch"
+}

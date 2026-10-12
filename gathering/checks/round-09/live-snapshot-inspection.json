@@ -1,0 +1,47 @@
+{
+  "schema": "ethereum-hash-snapshot/1-summary",
+  "chain_id": "1",
+  "endpoint": "http://127.0.0.1:36905/rpc/1",
+  "captured_at": "2026-10-12T22:22:55Z",
+  "block_number": "26179285",
+  "block_hash": "0x44735faee05e859ee4521f1b5585c44450b7aaa8139a61ca0a2b1471c6b2adcc",
+  "calls": [
+    {
+      "label": "ZTO-supply",
+      "to": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+      "data": "0x18160ddd",
+      "result": "0x0000000000000000000000000000000000000000033b2e3c9fd0803ce8000000",
+      "token": "ZTO",
+      "decoded_uint256": "1000000000000000000000000000",
+      "meaning": "totalSupply base units"
+    },
+    {
+      "label": "IMD-supply",
+      "to": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+      "data": "0x18160ddd",
+      "result": "0x00000000000000000000000000000000000000000003738341bb3fad74679000",
+      "token": "IMD",
+      "decoded_uint256": "4172270864297000000000000",
+      "meaning": "totalSupply base units"
+    },
+    {
+      "label": "ZTO-decimals",
+      "to": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+      "data": "0x313ce567",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000012",
+      "token": "ZTO",
+      "decoded_uint256": "18",
+      "meaning": "decimals"
+    },
+    {
+      "label": "IMD-decimals",
+      "to": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+      "data": "0x313ce567",
+      "result": "0x0000000000000000000000000000000000000000000000000000000000000012",
+      "token": "IMD",
+      "decoded_uint256": "18",
+      "meaning": "decimals"
+    }
+  ],
+  "evidence_limits": "Provider observations only: hash references and requireCanonical are not cryptographic proof, independent corroboration or verified finality. The provider must implement EIP-1898 honestly. No fallback to block numbers."
+}

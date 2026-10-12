@@ -1,0 +1,12 @@
+{
+  "arguments": [
+    "rpc_snapshot.py",
+    "eth_blockNumber",
+    "--rpc",
+    "http://127.0.0.1:36905/rpc/1"
+  ],
+  "exit": 0,
+  "stdout": "{\n  \"captured_at\": \"2026-10-12T22:25:42Z\",\n  \"endpoint\": \"http://127.0.0.1:36905/rpc/1\",\n  \"method\": \"eth_blockNumber\",\n  \"params\": [],\n  \"result\": \"0x18f772b\"\n}\n",
+  "stderr": "",
+  "transport_adaptation": "trial-only direct opener; source unchanged; no environment proxy discovery"
+}

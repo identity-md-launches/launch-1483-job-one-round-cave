@@ -1,0 +1,34 @@
+{
+  "schema": "window-handoff/v1",
+  "verified": true,
+  "archive_sha256": "a31abe3c6f255a16aca11a9759e3eabddb4f0ebc60b87aa3dc37b2bde1a605c8",
+  "archive_bytes": 2794,
+  "trusted_digest_matched": false,
+  "capture_bytes_sha256": "bdbfa911ee3968967aeac84376659881686d3aa56a26eb3be2a4d4e7181b591a",
+  "capture_schema_version": 3,
+  "portable_filenames": true,
+  "receipt_recomputed": true,
+  "address_summary_recomputed": true,
+  "window_receipt": {
+    "schema_version": 1,
+    "kind": "erc20-transfer-window-receipt",
+    "read_only": true,
+    "token": "ZTO",
+    "token_address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+    "from_block": 26179274,
+    "to_block": 26179285,
+    "from_block_anchor": {
+      "number": 26179274,
+      "hash": "0xc0b087ceb94ba4047c0637b4adecf5bfd9be2f0fc125fce25d75c033d6b20b3f"
+    },
+    "to_block_anchor": {
+      "number": 26179285,
+      "hash": "0x44735faee05e859ee4521f1b5585c44450b7aaa8139a61ca0a2b1471c6b2adcc"
+    },
+    "transfer_count": 0,
+    "window_sha256": "561bbd8ba723891a0a83f348301b1ca965183eae3d4589e0a7314efe6af80d89",
+    "capture_sha256": "a883473bb2a1b30ec4364f6c2e6d083254eb817c76a7f093d67814e63821385f",
+    "limitations": "This receipt fingerprints one provider capture after local validation; it does not prove completeness, finality, provider honesty, or a balance."
+  },
+  "limitations": "Integrity and local evidence validation only; no completeness, finality, provider honesty, balance, sender identity or execution safety established."
+}

@@ -1,0 +1,15 @@
+test_block_fee_required_canonical_bounded_and_consistent (__main__.Tests.test_block_fee_required_canonical_bounded_and_consistent) ... ok
+test_chain_mismatch_signed_or_summary_input_rejected (__main__.Tests.test_chain_mismatch_signed_or_summary_input_rejected) ... ok
+test_cli_exit_codes_no_partial_error_output_and_offline_demo (__main__.Tests.test_cli_exit_codes_no_partial_error_output_and_offline_demo) ... ok
+test_fee_shortfall_retains_diagnostic (__main__.Tests.test_fee_shortfall_retains_diagnostic) ... ok
+test_kit_without_line_folders (__main__.Tests.test_kit_without_line_folders) ... ok
+test_real_block_context_and_independent_fee_arithmetic (__main__.Tests.test_real_block_context_and_independent_fee_arithmetic) ... ok
+test_rlp_json_equivalence (__main__.Tests.test_rlp_json_equivalence) ... ok
+test_snapshot_validated_before_fee_context (__main__.Tests.test_snapshot_validated_before_fee_context) ... ok
+test_strict_input_bounds_duplicate_keys_and_unknown_fields (__main__.Tests.test_strict_input_bounds_duplicate_keys_and_unknown_fields) ... ok
+test_trusted_digest_optional_and_exact (__main__.Tests.test_trusted_digest_optional_and_exact) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.052s
+
+OK

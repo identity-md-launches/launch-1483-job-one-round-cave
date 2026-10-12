@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "line-4/tools/erc20-transfer-window/transfer_window.py",
+    "--rpc",
+    "http://127.0.0.1:36905/rpc/1",
+    "--from-block",
+    "26179274",
+    "--to-block",
+    "26179285",
+    "--address",
+    "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e"
+  ],
+  "exit": 0,
+  "stderr": ""
+}

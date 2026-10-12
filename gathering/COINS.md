@@ -1,12 +1,10 @@
 none
 
-All four goals and the shared tools work through public Ethereum observations
-or offline standard-library Python. Their existence needs no new coin. ZTO is
-the first real token used in supply captures, transfer windows and unsigned-call
-examples; IMD remains the second supported token. Call witness carries those
-existing observations without payments or a new asset. No Uniswap v4 hook is
-needed for these functions, so a new coin would add no necessary capability.
-
-There is no Solidity contract to judge ready for Sepolia. No launch/deployment
-order or request-check POST was warranted. No wallet, key, signing, transaction
-submission, deployment or payment was used.
+The four goals and all shared joins work with offline standard-library Python
+and public read-only Ethereum data. Real ZTO is the primary token in capture,
+transfer-window and unsigned-inspection demos; IMD is the secondary token in
+hash-pinned observations. Native EIP-1559 gas arithmetic uses ETH as required
+by Ethereum. A new coin cannot improve these goals and none depends on one.
+There is no necessary Uniswap v4 hook, launch request or Sepolia contract here.
+No coin-order, deploy-order, request-check POST, payment or transaction submission
+was needed or performed.

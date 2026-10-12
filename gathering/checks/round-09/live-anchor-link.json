@@ -1,0 +1,14 @@
+{
+  "schema": "pepeolithic-anchor-bridge/1",
+  "chain_id": 1,
+  "shared_anchor": {
+    "hash": "0x44735faee05e859ee4521f1b5585c44450b7aaa8139a61ca0a2b1471c6b2adcc",
+    "number": 26179285
+  },
+  "snapshot_sha256": "",
+  "transfer_window_sha256": "",
+  "token": "ZTO",
+  "token_address": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+  "transfer_count": 0,
+  "limitations": "A shared anchor links these supplied observations only; it does not prove finality, provider honesty, log completeness, token balance, or atomic collection."
+}
