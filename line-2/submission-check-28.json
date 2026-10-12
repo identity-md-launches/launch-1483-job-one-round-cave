@@ -1,0 +1,24 @@
+{
+  "scope_paths": [
+    "line-2/USED.md",
+    "dist/line-2/28.jpg",
+    "dist/line-2/28.json",
+    "line-2/WALL-28.md",
+    "line-2/checks-28.json",
+    "line-2/tools/handoff-reproduce/README.md",
+    "line-2/tools/handoff-reproduce/reproduce.py",
+    "line-2/tools/handoff-reproduce/test_reproduce.py",
+    "line-2/wall-review-28.json"
+  ],
+  "goal_unchanged": true,
+  "older_records_unchanged": 27,
+  "record_count": 28,
+  "wall_png_sha256": "dd73b9a4398ffc94c0b11b70a198d87ed4bc7131f39b5358e9ddac7a9020c90b",
+  "walls_identical": true,
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "files_under_100KB_outside_artifacts": true,
+  "checks_passed": true
+}

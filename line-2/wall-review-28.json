@@ -1,0 +1,52 @@
+{
+  "ancestor_sha256": "6e1919f5cb1c9ef1cd57b298c2fe441b0bdb35c11d4a4c5b2c1725fceaeced7d",
+  "wall_sha256": "dd73b9a4398ffc94c0b11b70a198d87ed4bc7131f39b5358e9ddac7a9020c90b",
+  "png_paths": [
+    "artifacts/line-2/wall.png",
+    "artifacts/line-2/wall-v9.png"
+  ],
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "8-bit RGB PNG",
+  "jpeg": {
+    "path": "dist/line-2/28.jpg",
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "baseline JPEG",
+    "bytes": 74042
+  },
+  "generated_motif": {
+    "format": "PNG",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "provider": "replicate",
+    "model": "black-forest-labs/flux-schnell"
+  },
+  "changed_pixels": 5472,
+  "changed_pixels_outside_patches": 0,
+  "patches_xywh": [
+    [
+      285,
+      920,
+      215,
+      40
+    ],
+    [
+      285,
+      988,
+      215,
+      40
+    ]
+  ],
+  "visual_review": "Inspected final whole wall: recognizable heavy-lidded wide-mouthed Pepe; both inherited hands each have four fingers and one thumb. New paired charcoal reed impressions occupy bare lower-left rock. No letters, numbers, signatures, logos, borders or frames added. Cave dimensions, framing, cracks, light and all ancestor marks preserved.",
+  "unmet_visual_requirements": [],
+  "limitations": [
+    "New marks are small and less distinct at thumbnail resolution. Visual review is local, not independent certification."
+  ]
+}

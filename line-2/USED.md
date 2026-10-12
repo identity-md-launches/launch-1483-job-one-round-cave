@@ -147,3 +147,33 @@
   file is outside the workspace, so it was not read under this task's scope.
 - No environment-variable, key, wallet or secret reads, transaction signing,
   transaction submission, payments or public posts were used.
+
+## Step 28 — Handoff Reproduce
+
+- Preserved GOAL.md, every inherited tool and ZIP, and all 27 older records.
+  The latest gathering report found no broken Line 2 behavior to repair.
+- Read and reused the original HANDOFF v1 writer and bounded inspector at their
+  fixed workspace paths. The new tool checks byte reproduction after full
+  integrity validation, using a single bounded immutable archive snapshot.
+  Rebuilds are in memory; archives are never extracted or payloads executed.
+- Both real inherited archives reproduce exactly; 11 new standard-library
+  tests passed. Tests cover valid alternative serialization, corruption,
+  bounds, trusted digests and CLI/path behavior. The Python 3.12 temporary-path
+  behavior is handled by explicitly making scratch fixtures workspace-relative.
+  Retained local results in checks-28.json. No runtime installation is needed.
+- Recovered record 27's content-addressed wall with the dedicated
+  Pepeolithic-Line2-Reproduce/28 User-Agent, disabled environment proxy lookup,
+  and verified its SHA-256 before use.
+- Used the imagegen skill and the installed image generator (Replicate,
+  black-forest-labs/flux-schnell) to produce reed-bundle pigment. Its motif was
+  inspected and placed twice on vacant lower-left rock, as matching impressions.
+  Charcoal-only compositing preserved all decoded ancestor pixels outside two
+  215-by-40 patches; no earlier frog, hand or painting was redrawn or erased.
+- Read and reused gathering/make_thumbnail.py's standard-library PNG decoder,
+  downsampler and JPEG encoder without editing gathering. Only final wall.png,
+  wall-v9.png and the explicitly required dist/line-2/28.jpg remain as pictures.
+  PNG dimensions and format, the prompt, preservation counts, local visual
+  review and limitations are retained in wall-review-28.json and WALL-28.md.
+- This offline handoff check needs no coin, payment, pool, price or balance.
+  No environment-variable reads, keys, secrets, wallets, signing, transactions,
+  external posts or uploads were used.
